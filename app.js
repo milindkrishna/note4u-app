@@ -16,8 +16,7 @@ const MongoStore = require('connect-mongo');
 
 
 const app = express();
-const port = 5000 || process.env.PORT;
-
+const PORT = process.env.PORT || 5000;
 
 // creating a session
 app.use(session({
@@ -76,6 +75,6 @@ app.use('*',function(req,res){
     
 });
 
-app.listen(port,() => {
-    console.log(`App listening to port ${port}`);
+app.listen(PORT,() => {
+    console.log(`App listening to port ${PORT}`);
 })
